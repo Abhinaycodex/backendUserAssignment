@@ -1,0 +1,46 @@
+Postman Documentation**
+You can create and export a **Postman Collection** for your API.
+
+1. **Open Postman**
+2. **Create a New Collection**
+3. **Add the Following Requests:**
+   - **POST** `/api/users/register`
+   - **POST** `/api/users/login`
+   - **GET** `/api/users/profile` (with Bearer Token)
+   - **PUT** `/api/users/profile` (with Bearer Token)
+4. **Export the Collection**
+   - Click on **Export** (Top Right)
+   - Save as **`UserProfileAPI.postman_collection.json`**
+5. **Share the Collection**:
+   - Upload it to **Postman Cloud**
+   - Share the **Public Link** in the README.
+
+---
+
+
+POST /api/users/register
+Content-Type: application/json
+{
+  "name": "John Doe",
+  "email": "johndoe@example.com",
+  "password": "securepassword",
+  "address": "123 Street, City, Country",
+  "bio": "Software Engineer",
+  "profilePicture": "https://example.com/profile.jpg"
+}
+
+
+POST /api/users/login
+Content-Type: application/json
+{
+  "email": "johndoe@example.com",
+  "password": "securepassword"
+}
+
+
+
+### **📌 Sample `.env` File**
+```env
+MONGO_URI=mongodb://127.0.0.1:27017/backenduser
+JWT_SECRET=your_super_secret_jwt_key
+PORT=5000
